@@ -1,11 +1,8 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-import serial.tools.list_ports
-from constants.constants import *
+from constant.options import *
 
 def init_extra_settings(self):
-
-    
     # Frame for extra controls
     self.extra_frame = ttk.Frame(self.settings_tab)
     self.extra_frame.pack(pady=10)

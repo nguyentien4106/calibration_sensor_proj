@@ -7,7 +7,8 @@ import time
 from tabs.settings.settings_tab import *
 from tabs.settings.extra_setting import *
 from helpers.common import *
-from constants.requests import *
+from constant.options import *
+from constant.requests import *
 
 class CalibrationSensorApp:
     def __init__(self, root : tk.Tk):
@@ -79,7 +80,7 @@ class CalibrationSensorApp:
             self.stop_thread = False
             self.receive_thread = threading.Thread(target=self.receive_data)
             self.receive_thread.start()
-            # self.hide_loading_panel()
+            self.hide_loading_panel()
         except Exception as e:
             self.root.after(0, lambda: messagebox.showerror("Connection Error", f"Could not open port {port}: {e}"))
 
@@ -138,17 +139,11 @@ class CalibrationSensorApp:
     def on_closing(self):
         """Handle app closure by stopping the background thread and closing the serial port."""
         self.stop_thread = True
-        print(hasattr(self, 'receive_thread'))
         if hasattr(self, 'receive_thread'):
-            print('join')
             self.receive_thread.join()  # Wait for the thread to finish
 
         if self.serial_port and self.serial_port.is_open:
             self.serial_port.close()
-
-        print(self.serial_port)
-        print(self.stop_thread)
-
 
         self.root.destroy()
 
