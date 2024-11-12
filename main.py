@@ -5,7 +5,7 @@ import serial.tools.list_ports
 import threading
 import time
 from tabs.settings.settings_tab import *
-from tabs.settings.extra_setting import *
+from tabs.settings.extra_setting import init_extra_settings
 from helpers.common import *
 from constant.options import *
 from constant.requests import *
@@ -14,11 +14,13 @@ class CalibrationSensorApp:
     def __init__(self, root : tk.Tk):
         self.root = root
         self.root.title("Calibration Sensor Controller")
-
+        # self.root.geometry("500x500")
         # Initialize serial port and thread control flag
         self.serial_port = None
         self.stop_thread = False
 
+        self.leds_ordering = []
+        self.leds_button = []
         # Variables for extra controls
         self.extra_controls_shown = False
         self.option_dropdown = None
@@ -101,7 +103,7 @@ class CalibrationSensorApp:
                     self.root.after(0, self.update_display, data)
             except Exception as e:
                 self.root.after(0, self.update_display, f"Error reading data: {e}")
-            time.sleep(0.1)
+            time.sleep(2)
 
     def update_display(self, message):
         """Update the data display in the Data tab."""
@@ -164,18 +166,21 @@ class CalibrationSensorApp:
 
         # Center the loading panel
         self.root.update_idletasks()
-        x = self.root.winfo_screenwidth()
-        y = self.root.winfo_screenheight()
-        self.loading_panel.geometry(f"200x100+{x}+{y}")
-        # self.loading_panel.overrideredirect(True)
+        x = self.root.winfo_width()
+        y = self.root.winfo_height()
+        self.loading_panel.geometry(f"200x100+{self.root.winfo_x() + int(x/2) - 100}+{self.root.winfo_y() + int(y/2) - 50}")
+        self.loading_panel.overrideredirect(True)
 
-        ttk.Label(self.loading_panel, text=text).pack(pady=20)
+        ttk.Label(self.loading_panel, text=text, font='Helvetica 12 bold').pack(pady=20)
 
     def hide_loading_panel(self):
         """Hide the loading panel."""
         if self.loading_panel:
             self.loading_panel.destroy()
             self.loading_panel = None
+
+    def on_led_mode_change(self):
+        pass
 
 # Initialize Tkinter and the app
 root = tk.Tk()
