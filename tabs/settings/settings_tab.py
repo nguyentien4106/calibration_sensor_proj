@@ -13,7 +13,7 @@ def init_settings_tab(self):
 
     # Left Column - Port and Baud Rate selection
     ttk.Label(self.left_frame, text="Select COM Port:").pack(pady=5)
-    self.port_list = ttk.Combobox(self.left_frame, width=30)
+    self.port_list = ttk.Combobox(self.left_frame, width=30, state="readonly")
     self.refresh_ports()
     self.port_list.pack(pady=5)
 

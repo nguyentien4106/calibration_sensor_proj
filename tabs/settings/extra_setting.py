@@ -80,24 +80,23 @@ def on_led_mode_change(self, idx, val, opt):
     self.leds_frame = tk.Frame(self.settings_tab)
 
     if( selected_mode == "SELF CONFIG"):
-        self.leds_frame.pack(padx=10, pady=10, side="bottom")
+        self.leds_frame.pack(padx=10, pady=10, side=tk.LEFT)
         # Create a frame to hold the buttons
+        ttk.Label(self.settings_tab, text="Ordering: ").pack(side=tk.LEFT, padx=10, pady=10)
+        
         self.preview_ordering = ttk.Label(self.settings_tab, text="", background='#fff', foreground='#f00')
-        ttk.Label(self.settings_tab, text="Ordering: ").pack(side=tk.BOTTOM, padx=10, pady=10)
-        self.preview_ordering.pack(side=tk.BOTTOM, padx=10, pady=10)
+        self.preview_ordering.pack(side=tk.LEFT, padx=10, pady=10)
 
         for i in range(1, 21):
             button = tk.Button(self.leds_frame, text=str(i), command=lambda i=i: button_click(self, i))
             self.leds_button.append(button)
             button.grid(row=(i-1)//5, column=(i-1)%5, padx=5, pady=5)  # Arrange in a grid of 5 columns
     else:
-        print('destroy')
+        print('destroy', self.leds_frame)
         self.leds_frame.destroy()
+        self.leds_frame = None
 
 def button_click(self, val):
-    print(val)
     self.leds_button[val - 1]["state"] = "disabled"
     self.leds_ordering.append(val)
-    print(self.preview_ordering)
-    print(','.join(str(x) for x in self.leds_ordering))
     self.preview_ordering["text"] = '->'.join(str(x) for x in self.leds_ordering)
