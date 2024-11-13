@@ -1,0 +1,5 @@
+Added Component: Designator=Cx?(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Cx?-1
+Added Pin To Net: NetName=+5 Pin=Cx?-2
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx? 10nF/1206

@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NetD15_2 Pin=L4-1
+Removed Pin From Net: NetName=BAT_+ Pin=L4-2
+Removed Member From Class: ClassName=Sche_Boost Member=L4
+Added Component: Designator=L10(Inductor 10mmx10mm)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "CDRH104RNP-100NC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/cdrh104rnp-100nc/sumida?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://products.sumida.com/products/pdf/CDRH104R.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Sumida"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "CDRH104RNP-100NC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "851-CDRH104RNP-100NC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Sumida/CDRH104RNP-100NC?qs=qsxNffVSAzE8lEZlJlwl9Q%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD15_2 Pin=L10-1
+Added Pin To Net: NetName=BAT_+ Pin=L10-2
+Added Member To Class: ClassName=Sche_Boost Member=Component L10 Inductor

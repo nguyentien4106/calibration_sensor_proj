@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=NetC10_1 Pin=C10-1
+Removed Pin From Net: NetName=NetC10_1 Pin=C10-1
+Removed Pin From Net: NetName=NetC10_1 Pin=C10-1
+Removed Pin From Net: NetName=NetC10_1 Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=D1-1
+Removed Pin From Net: NetName=+3.3 Pin=D1-2
+Removed Pin From Net: NetName=NetC10_1 Pin=U1-4
+Added Component: Designator=Cx27(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Component: Designator=Cx28(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Component: Designator=D17(SOT23-3-2-1-BCE)
+Added Component: Designator=R43(RES-SMD-1206)
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Component: Designator=U3(ACS578xx)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ACS758LCB-100B-PFF-T/Allegro+Industries/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Allegro"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ACS758LCB-100B-PFF-T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "5-CB-5 Allegro MicroSystems LLC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/ACS758LCB-100B-PFF-T/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ACS758LCB-100B-PFF-T/Allegro+Industries/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Cx27-1
+Added Pin To Net: NetName=ADC_Current Pin=Cx27-2
+Added Pin To Net: NetName=GND Pin=Cx28-1
+Added Pin To Net: NetName=+5 Pin=Cx28-2
+Added Pin To Net: NetName=ADC_Current Pin=D17-3
+Added Pin To Net: NetName=ADC_Current Pin=R43-2
+Added Pin To Net: NetName=+5 Pin=U3-1
+Added Pin To Net: NetName=GND Pin=U3-2
+Added Pin To Net: NetName=NetC10_1 Pin=U3-5
+Change Net Name : Old Net Name=NetC10_1 New Net Name=NetD6_2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=U1-4
+Added Pin To Net: NetName=NetC10_1 Pin=U3-4
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetR43_1 Pin=R43-1
+Added Pin To Net: NetName=NetR43_1 Pin=U3-3
+Added Net: Name=NetR43_1
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx27 10nF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx28 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component D17 10A/200V
+Added Member To Class: ClassName=Sche_Boost Member=Component R43 1K/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component U3 ACS758LCB-100B-PFF-T

@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=ADC_Current Pin=Cx5-2
+Removed Pin From Net: NetName=ADC_Current Pin=Cx6-2
+Removed Pin From Net: NetName=ADC_Current Pin=D2-3
+Removed Pin From Net: NetName=ADC_Current Pin=D3-3
+Removed Pin From Net: NetName=ADC_Current Pin=R4-2
+Removed Pin From Net: NetName=ADC_Current Pin=R5-2
+Removed Pin From Net: NetName=ADC_Current Pin=U3-14
+Added Pin To Net: NetName=ADC_Current Pin=D3-1
+Change Net Name : Old Net Name=ADC_Current New Net Name=GND
+Added Pin To Net: NetName=ADC_Current Pin=Cx5-2
+Added Pin To Net: NetName=ADC_Current Pin=Cx6-2
+Added Pin To Net: NetName=ADC_Current Pin=D2-3
+Added Pin To Net: NetName=ADC_Current Pin=D3-3
+Added Pin To Net: NetName=ADC_Current Pin=R4-2
+Added Pin To Net: NetName=ADC_Current Pin=R5-2
+Added Pin To Net: NetName=ADC_Current Pin=U3-14
+Added Net: Name=ADC_Current
+Added Rule: Name=Schematic Supply Nets_1

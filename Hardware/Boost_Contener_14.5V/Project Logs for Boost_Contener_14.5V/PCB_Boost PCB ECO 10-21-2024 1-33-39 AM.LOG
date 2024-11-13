@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=RELAY Pin=U3-33
+Added Pin To Net: NetName=RELAY Pin=U3-2

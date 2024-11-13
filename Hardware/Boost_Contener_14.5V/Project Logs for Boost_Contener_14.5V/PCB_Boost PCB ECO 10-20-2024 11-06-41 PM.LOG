@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=GND Pin=Cx1-2
+Removed Pin From Net: NetName=GND Pin=Cx2-2
+Removed Pin From Net: NetName=GND Pin=R45-1
+Removed Pin From Net: NetName=GND Pin=R46-1
+Removed Pin From Net: NetName=NetCx5_2 Pin=R47-1
+Removed Pin From Net: NetName=NetCx6_2 Pin=R48-1
+Removed Member From Class: ClassName=Sche_Boost Member=Cx1
+Removed Member From Class: ClassName=Sche_Boost Member=Cx2
+Removed Member From Class: ClassName=Sche_Boost Member=R47
+Removed Member From Class: ClassName=Sche_Boost Member=R48
+Added Pin To Net: NetName=NetCx5_2 Pin=R45-1
+Added Pin To Net: NetName=GND Pin=R45-2
+Added Pin To Net: NetName=NetCx6_2 Pin=R46-1
+Added Pin To Net: NetName=GND Pin=R46-2
+Added Pin To Net: NetName=NetCx6_2 Pin=U3-12
+Added Pin To Net: NetName=NetCx5_2 Pin=U3-15
+Change Net Name : Old Net Name=NetCx5_2 New Net Name=ADC_Current_1
+Change Net Name : Old Net Name=NetCx6_2 New Net Name=ADC_Current_2

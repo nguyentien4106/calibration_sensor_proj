@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=ADC_VOUT Pin=U3-12
+Removed Pin From Net: NetName=ADC_Current_1 Pin=U3-13
+Removed Pin From Net: NetName=Temp_SS_1 Pin=U3-14
+Removed Pin From Net: NetName=ADC_VIN Pin=U3-15
+Removed Pin From Net: NetName=FAN2 Pin=U3-18
+Added Pin To Net: NetName=FAN2 Pin=U3-12
+Added Pin To Net: NetName=ADC_VOUT Pin=U3-13
+Added Pin To Net: NetName=ADC_Current_1 Pin=U3-14
+Added Pin To Net: NetName=Temp_SS_1 Pin=U3-15
+Added Pin To Net: NetName=ADC_VIN Pin=U3-16

@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=FAN1 Pin=R49-1
+Added Pin To Net: NetName=FAN1 Pin=U3-31
+Added Net: Name=FAN1
+Added Pin To Net: NetName=FAN2 Pin=R54-1
+Added Net: Name=FAN2
+Added Rule: Name=Schematic Supply Nets_17
+Added Rule: Name=Schematic Supply Nets_18

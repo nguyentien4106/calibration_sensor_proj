@@ -1,0 +1,159 @@
+Removed Member From Class: ClassName=Sche_Boost Member=C10
+Removed Member From Class: ClassName=Sche_Boost Member=Cx?
+Removed Member From Class: ClassName=Sche_Boost Member=D18
+Change Component Designator: OldDesignator=C1 NewDesignator=C5
+Change Component Designator: OldDesignator=C5 NewDesignator=C6
+Change Component Designator: OldDesignator=C10 NewDesignator=C1
+Change Component Designator: OldDesignator=C11 NewDesignator=C2
+Change Component Designator: OldDesignator=Cx1 NewDesignator=Cx5
+Change Component Designator: OldDesignator=Cx2 NewDesignator=Cx7
+Change Component Designator: OldDesignator=Cx3 NewDesignator=Cx9
+Change Component Designator: OldDesignator=Cx4 NewDesignator=Cx10
+Change Component Designator: OldDesignator=Cx5 NewDesignator=Cx11
+Change Component Designator: OldDesignator=Cx6 NewDesignator=Cx12
+Change Component Designator: OldDesignator=Cx7 NewDesignator=Cx13
+Change Component Designator: OldDesignator=Cx8 NewDesignator=Cx14
+Change Component Designator: OldDesignator=Cx9 NewDesignator=Cx15
+Change Component Designator: OldDesignator=Cx10 NewDesignator=Cx16
+Change Component Designator: OldDesignator=Cx11 NewDesignator=Cx17
+Change Component Designator: OldDesignator=Cx12 NewDesignator=Cx18
+Change Component Designator: OldDesignator=Cx13 NewDesignator=Cx19
+Change Component Designator: OldDesignator=Cx14 NewDesignator=Cx20
+Change Component Designator: OldDesignator=Cx15 NewDesignator=Cx21
+Change Component Designator: OldDesignator=Cx16 NewDesignator=Cx22
+Change Component Designator: OldDesignator=Cx17 NewDesignator=Cx23
+Change Component Designator: OldDesignator=Cx18 NewDesignator=Cx24
+Change Component Designator: OldDesignator=Cx19 NewDesignator=Cx25
+Change Component Designator: OldDesignator=Cx20 NewDesignator=Cx28
+Change Component Designator: OldDesignator=Cx21 NewDesignator=Cx27
+Change Component Designator: OldDesignator=Cx22 NewDesignator=Cx29
+Change Component Designator: OldDesignator=Cx23 NewDesignator=Cx30
+Change Component Designator: OldDesignator=Cx24 NewDesignator=Cx31
+Change Component Designator: OldDesignator=Cx26 NewDesignator=Cx34
+Change Component Designator: OldDesignator=Cx27 NewDesignator=Cx6
+Change Component Designator: OldDesignator=Cx28 NewDesignator=Cx8
+Change Component Designator: OldDesignator=Cx29 NewDesignator=Cx1
+Change Component Designator: OldDesignator=Cx30 NewDesignator=Cx2
+Change Component Designator: OldDesignator=Cx31 NewDesignator=Cx3
+Change Component Designator: OldDesignator=Cx32 NewDesignator=Cx4
+Change Component Designator: OldDesignator=Cx33 NewDesignator=Cx32
+Change Component Designator: OldDesignator=Cx34 NewDesignator=Cx33
+Change Component Designator: OldDesignator=Cx? NewDesignator=Cx26
+Change Component Designator: OldDesignator=D1 NewDesignator=D2
+Change Component Designator: OldDesignator=D2 NewDesignator=D4
+Change Component Designator: OldDesignator=D3 NewDesignator=D5
+Change Component Designator: OldDesignator=D4 NewDesignator=D6
+Change Component Designator: OldDesignator=D5 NewDesignator=D7
+Change Component Designator: OldDesignator=D6 NewDesignator=D8
+Change Component Designator: OldDesignator=D7 NewDesignator=D9
+Change Component Designator: OldDesignator=D8 NewDesignator=D10
+Change Component Designator: OldDesignator=D9 NewDesignator=D11
+Change Component Designator: OldDesignator=D10 NewDesignator=D12
+Change Component Designator: OldDesignator=D11 NewDesignator=D13
+Change Component Designator: OldDesignator=D12 NewDesignator=D14
+Change Component Designator: OldDesignator=D14 NewDesignator=D15
+Change Component Designator: OldDesignator=D15 NewDesignator=D16
+Change Component Designator: OldDesignator=D16 NewDesignator=D17
+Change Component Designator: OldDesignator=D17 NewDesignator=D3
+Change Component Designator: OldDesignator=D18 NewDesignator=D1
+Change Component Designator: OldDesignator=F1 NewDesignator=F4
+Change Component Designator: OldDesignator=F2 NewDesignator=F1
+Change Component Designator: OldDesignator=F3 NewDesignator=F2
+Change Component Designator: OldDesignator=F4 NewDesignator=F3
+Change Component Designator: OldDesignator=L10 NewDesignator=L4
+Change Component Designator: OldDesignator=Q3 NewDesignator=Q4
+Change Component Designator: OldDesignator=Q4 NewDesignator=Q5
+Change Component Designator: OldDesignator=Q5 NewDesignator=Q6
+Change Component Designator: OldDesignator=Q6 NewDesignator=Q7
+Change Component Designator: OldDesignator=Q7 NewDesignator=Q8
+Change Component Designator: OldDesignator=Q8 NewDesignator=Q9
+Change Component Designator: OldDesignator=Q9 NewDesignator=Q10
+Change Component Designator: OldDesignator=Q10 NewDesignator=Q11
+Change Component Designator: OldDesignator=Q11 NewDesignator=Q12
+Change Component Designator: OldDesignator=Q12 NewDesignator=Q13
+Change Component Designator: OldDesignator=Q13 NewDesignator=Q14
+Change Component Designator: OldDesignator=Q14 NewDesignator=Q15
+Change Component Designator: OldDesignator=Q15 NewDesignator=Q16
+Change Component Designator: OldDesignator=Q16 NewDesignator=Q3
+Change Component Designator: OldDesignator=R3 NewDesignator=R4
+Change Component Designator: OldDesignator=R4 NewDesignator=R6
+Change Component Designator: OldDesignator=R5 NewDesignator=R7
+Change Component Designator: OldDesignator=R6 NewDesignator=R8
+Change Component Designator: OldDesignator=R7 NewDesignator=R9
+Change Component Designator: OldDesignator=R8 NewDesignator=R10
+Change Component Designator: OldDesignator=R9 NewDesignator=R11
+Change Component Designator: OldDesignator=R10 NewDesignator=R12
+Change Component Designator: OldDesignator=R11 NewDesignator=R13
+Change Component Designator: OldDesignator=R12 NewDesignator=R14
+Change Component Designator: OldDesignator=R13 NewDesignator=R15
+Change Component Designator: OldDesignator=R14 NewDesignator=R16
+Change Component Designator: OldDesignator=R15 NewDesignator=R17
+Change Component Designator: OldDesignator=R16 NewDesignator=R18
+Change Component Designator: OldDesignator=R17 NewDesignator=R19
+Change Component Designator: OldDesignator=R18 NewDesignator=R20
+Change Component Designator: OldDesignator=R19 NewDesignator=R21
+Change Component Designator: OldDesignator=R20 NewDesignator=R22
+Change Component Designator: OldDesignator=R21 NewDesignator=R23
+Change Component Designator: OldDesignator=R22 NewDesignator=R24
+Change Component Designator: OldDesignator=R23 NewDesignator=R25
+Change Component Designator: OldDesignator=R24 NewDesignator=R26
+Change Component Designator: OldDesignator=R25 NewDesignator=R27
+Change Component Designator: OldDesignator=R26 NewDesignator=R28
+Change Component Designator: OldDesignator=R27 NewDesignator=R29
+Change Component Designator: OldDesignator=R28 NewDesignator=R30
+Change Component Designator: OldDesignator=R29 NewDesignator=R31
+Change Component Designator: OldDesignator=R30 NewDesignator=R32
+Change Component Designator: OldDesignator=R31 NewDesignator=R33
+Change Component Designator: OldDesignator=R32 NewDesignator=R34
+Change Component Designator: OldDesignator=R33 NewDesignator=R35
+Change Component Designator: OldDesignator=R34 NewDesignator=R36
+Change Component Designator: OldDesignator=R35 NewDesignator=R37
+Change Component Designator: OldDesignator=R36 NewDesignator=R38
+Change Component Designator: OldDesignator=R37 NewDesignator=R39
+Change Component Designator: OldDesignator=R38 NewDesignator=R40
+Change Component Designator: OldDesignator=R39 NewDesignator=R41
+Change Component Designator: OldDesignator=R40 NewDesignator=R42
+Change Component Designator: OldDesignator=R41 NewDesignator=R43
+Change Component Designator: OldDesignator=R42 NewDesignator=R44
+Change Component Designator: OldDesignator=R43 NewDesignator=R5
+Change Component Designator: OldDesignator=R44 NewDesignator=R3
+Change Component Designator: OldDesignator=RL1 NewDesignator=RL2
+Change Component Designator: OldDesignator=RL2 NewDesignator=RL1
+Change Component Designator: OldDesignator=U2 NewDesignator=U4
+Change Component Designator: OldDesignator=U3 NewDesignator=U2
+Change Component Designator: OldDesignator=U4 NewDesignator=U3
+Change Net Name : Old Net Name=NetC10_1 New Net Name=NetC1_1
+Change Net Name : Old Net Name=NetCx6_1 New Net Name=NetCx12_1
+Change Net Name : Old Net Name=NetCx8_2 New Net Name=NetCx14_2
+Change Net Name : Old Net Name=NetCx12_1 New Net Name=NetCx18_1
+Change Net Name : Old Net Name=NetCx14_2 New Net Name=NetCx20_2
+Change Net Name : Old Net Name=NetCx18_1 New Net Name=NetCx24_1
+Change Net Name : Old Net Name=NetCx19_1 New Net Name=NetCx25_1
+Change Net Name : Old Net Name=NetCx22_1 New Net Name=NetCx29_1
+Change Net Name : Old Net Name=NetCx26_2 New Net Name=NetCx34_2
+Change Net Name : Old Net Name=NetCx31_1 New Net Name=NetCx3_1
+Change Net Name : Old Net Name=NetCx32_1 New Net Name=NetCx4_1
+Change Net Name : Old Net Name=NetD2_2 New Net Name=NetD4_2
+Change Net Name : Old Net Name=NetD6_2 New Net Name=NetD8_2
+Change Net Name : Old Net Name=NetD15_2 New Net Name=NetD16_2
+Change Net Name : Old Net Name=NetQ3_2 New Net Name=NetQ4_2
+Change Net Name : Old Net Name=NetQ3_3 New Net Name=NetQ4_3
+Change Net Name : Old Net Name=NetQ4_2 New Net Name=NetQ5_2
+Change Net Name : Old Net Name=NetQ4_3 New Net Name=NetQ5_3
+Change Net Name : Old Net Name=NetQ7_1 New Net Name=NetQ8_1
+Change Net Name : Old Net Name=NetQ8_1 New Net Name=NetQ9_1
+Change Net Name : Old Net Name=NetQ9_1 New Net Name=NetQ10_1
+Change Net Name : Old Net Name=NetQ10_1 New Net Name=NetQ11_1
+Change Net Name : Old Net Name=NetQ12_1 New Net Name=NetQ13_1
+Change Net Name : Old Net Name=NetQ13_1 New Net Name=NetQ14_1
+Change Net Name : Old Net Name=NetQ14_1 New Net Name=NetQ15_1
+Change Net Name : Old Net Name=NetQ15_1 New Net Name=NetQ16_1
+Change Net Name : Old Net Name=NetR3_1 New Net Name=NetR4_1
+Change Net Name : Old Net Name=NetR8_1 New Net Name=NetR10_1
+Change Net Name : Old Net Name=NetR14_1 New Net Name=NetR16_1
+Change Net Name : Old Net Name=NetR16_1 New Net Name=NetR18_1
+Change Net Name : Old Net Name=NetR26_2 New Net Name=NetR28_2
+Change Net Name : Old Net Name=NetR43_1 New Net Name=NetR5_1
+Added Member To Class: ClassName=Sche_Boost Member=Component C6 330uF/25V
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx25 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component D13 10A/200V

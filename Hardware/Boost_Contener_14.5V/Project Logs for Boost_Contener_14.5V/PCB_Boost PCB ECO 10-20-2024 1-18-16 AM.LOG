@@ -1,0 +1,8 @@
+Added Component: Designator=R37(RES-SMD-1206)
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=R37-1
+Added Pin To Net: NetName=GND Pin=R37-2
+Added Member To Class: ClassName=Sche_Boost Member=Component R37 Res

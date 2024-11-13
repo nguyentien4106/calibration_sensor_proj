@@ -1,0 +1,12 @@
+Added Component: Designator=L1(L-DIP-2CORE-BRANCH)
+Added Component: Designator=L2(L-DIP-2CORE-BRANCH)
+Added Pin To Net: NetName=BAT_+ Pin=L1-1
+Added Pin To Net: NetName=BAT_+ Pin=L1-2
+Added Pin To Net: NetName=NetCx8_2 Pin=L1-3
+Added Pin To Net: NetName=NetCx8_2 Pin=L1-4
+Added Pin To Net: NetName=BAT_+ Pin=L2-1
+Added Pin To Net: NetName=BAT_+ Pin=L2-2
+Added Pin To Net: NetName=NetCx14_2 Pin=L2-3
+Added Pin To Net: NetName=NetCx14_2 Pin=L2-4
+Added Member To Class: ClassName=Sche_Boost Member=Component L1 coupled inductor
+Added Member To Class: ClassName=Sche_Boost Member=Component L2 coupled inductor

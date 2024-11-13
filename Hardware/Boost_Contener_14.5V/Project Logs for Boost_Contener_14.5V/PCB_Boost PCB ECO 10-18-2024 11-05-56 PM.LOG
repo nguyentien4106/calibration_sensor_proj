@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=IC1 Old Footprint=SOIC-8 New Footprint=SOIC127P600X175-9N
+Added Pin To Net: NetName=GND Pin=IC1-9

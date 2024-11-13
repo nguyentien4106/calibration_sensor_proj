@@ -1,0 +1,16 @@
+Added Component: Designator=VR1(TO-263_L)
+Add component (AddParameter): Name = "Availability"; Value = "Not in stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/XL6009/XLSEMI/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "XLSEMI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "XL6009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-263-5L XLSEMI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/XL6009/XLSEMI/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin IC1-9
+Added Pin To Net: NetName=BAT_IN- Pin=VR1-1
+Added Pin To Net: NetName=NetD15_2 Pin=VR1-3
+Added Pin To Net: NetName=NetCx22_1 Pin=VR1-4
+Added Pin To Net: NetName=NetC8_1 Pin=VR1-5
+Added Pin To Net: NetName=NetD15_2 Pin=VR1-6
+Added Member To Class: ClassName=Sche_Boost Member=Component VR1 XL3005

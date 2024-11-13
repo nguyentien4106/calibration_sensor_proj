@@ -1,0 +1,18 @@
+Added Component: Designator=F2(FUSE-Blade)
+Added Component: Designator=F3(FUSE-Blade)
+Added Component: Designator=F4(FUSE-Blade)
+Added Pin To Net: NetName=BAT_IN+ Pin=F2-1
+Added Pin To Net: NetName=BAT_IN+ Pin=F2-1
+Added Pin To Net: NetName=BAT_+ Pin=F2-2
+Added Pin To Net: NetName=BAT_+ Pin=F2-2
+Added Pin To Net: NetName=BAT_IN+ Pin=F3-1
+Added Pin To Net: NetName=BAT_IN+ Pin=F3-1
+Added Pin To Net: NetName=BAT_+ Pin=F3-2
+Added Pin To Net: NetName=BAT_+ Pin=F3-2
+Added Pin To Net: NetName=BAT_IN+ Pin=F4-1
+Added Pin To Net: NetName=BAT_IN+ Pin=F4-1
+Added Pin To Net: NetName=BAT_+ Pin=F4-2
+Added Pin To Net: NetName=BAT_+ Pin=F4-2
+Added Member To Class: ClassName=Sche_Boost Member=Component F2 F
+Added Member To Class: ClassName=Sche_Boost Member=Component F3 F
+Added Member To Class: ClassName=Sche_Boost Member=Component F4 F

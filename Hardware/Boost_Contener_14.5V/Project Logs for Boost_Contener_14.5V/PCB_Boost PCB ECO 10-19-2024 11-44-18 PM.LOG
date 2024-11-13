@@ -1,0 +1,53 @@
+Removed Pin From Net: NetName=BAT_IN+ Pin=C11-1
+Removed Pin From Net: NetName=BAT_IN+ Pin=C11-1
+Removed Pin From Net: NetName=BAT_IN+ Pin=C11-1
+Removed Pin From Net: NetName=BAT_IN+ Pin=C11-1
+Added Component: Designator=Cx31(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Component: Designator=Cx32(CN-SMD-0805)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Component: Designator=D18(1N4148_SMD)
+Add component (AddParameter): Name = "Code - JEDEC"; Value = "DO-214-AB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "July-2002: Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1N5007"; VariantName = "[No Variations]"
+Added Component: Designator=Q16(SOT23-3-2-1-BCE)
+Add component (AddParameter): Name = "Value"; Value = "C1815"; VariantName = "[No Variations]"
+Added Component: Designator=R44(RES-SMD-1206)
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Component: Designator=RL2(Relay YL368-A)
+Added Pin To Net: NetName=+5 Pin=Cx31-2
+Added Pin To Net: NetName=GND Pin=Cx32-2
+Added Pin To Net: NetName=+5 Pin=D18-2
+Added Pin To Net: NetName=GND Pin=Q16-1
+Added Pin To Net: NetName=RELAY Pin=R44-2
+Added Pin To Net: NetName=+5 Pin=RL2-2
+Added Pin To Net: NetName=BAT_IN+ Pin=RL2-4
+Change Net Name : Old Net Name=BAT_+ New Net Name=+12
+Change Net Name : Old Net Name=BAT_IN+ New Net Name=NetF1_1
+Added Pin To Net: NetName=BAT_IN+ Pin=C11-1
+Added Pin To Net: NetName=BAT_IN+ Pin=C11-1
+Added Pin To Net: NetName=BAT_IN+ Pin=C11-1
+Added Pin To Net: NetName=BAT_IN+ Pin=C11-1
+Added Pin To Net: NetName=BAT_IN+ Pin=RL2-3
+Added Net: Name=BAT_IN+
+Added Pin To Net: NetName=NetCx31_1 Pin=Cx31-1
+Added Pin To Net: NetName=NetCx31_1 Pin=D18-1
+Added Pin To Net: NetName=NetCx31_1 Pin=Q16-2
+Added Pin To Net: NetName=NetCx31_1 Pin=RL2-1
+Added Net: Name=NetCx31_1
+Added Pin To Net: NetName=NetCx32_1 Pin=Cx32-1
+Added Pin To Net: NetName=NetCx32_1 Pin=Q16-3
+Added Pin To Net: NetName=NetCx32_1 Pin=R44-1
+Added Net: Name=NetCx32_1
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx31 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx32 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component D18 Diode
+Added Member To Class: ClassName=Sche_Boost Member=Component Q16 S8050
+Added Member To Class: ClassName=Sche_Boost Member=Component R44 1k/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component RL2 Relay YL-368-A
+Added Rule: Name=Schematic Supply Nets_14

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=BAT_IN- Pin=Cx32-1
+Removed Pin From Net: NetName=BAT_IN+ Pin=Cx32-2
+Removed Pin From Net: NetName=BAT_IN- Pin=Cx33-1
+Removed Pin From Net: NetName=BAT_IN+ Pin=Cx33-2
+Removed Member From Class: ClassName=Sche_Boost Member=Cx32
+Removed Member From Class: ClassName=Sche_Boost Member=Cx33

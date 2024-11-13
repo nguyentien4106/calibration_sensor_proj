@@ -1,0 +1,103 @@
+Added Component: Designator=C7(TANTALUM 3528)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/T493C106K020BH6310/Kemet/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T493C106K020BH6310"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SMD-2 Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T493C106K020BH6310/Kemet/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Cx35(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3.3 Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=Cx35-1
+Added Pin To Net: NetName=+5 Pin=Cx35-2
+Added Member To Class: ClassName=Sche_Boost Member=Component C1 JP2
+Added Member To Class: ClassName=Sche_Boost Member=Component C5 1000uF/10V
+Added Member To Class: ClassName=Sche_Boost Member=Component C7 Cap Tantalum
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx3 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx5 10nF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx7 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx9 100nF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx10 10uF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx11 10uF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx12 22pF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx13 100nF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx14 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx15 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx16 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx17 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx18 22pF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx19 100nF/0805
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx20 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx21 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx22 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx23 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx24 100pF/1206/1KV
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx26 10nF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx27 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx28 10uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx29 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx33 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx35 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component D1 Diode
+Added Member To Class: ClassName=Sche_Boost Member=Component D3 10A/200V
+Added Member To Class: ClassName=Sche_Boost Member=Component D4 Diode schottky
+Added Member To Class: ClassName=Sche_Boost Member=Component D5 Diode schottky
+Added Member To Class: ClassName=Sche_Boost Member=Component D6 Diode schottky
+Added Member To Class: ClassName=Sche_Boost Member=Component D7 Diode schottky
+Added Member To Class: ClassName=Sche_Boost Member=Component D8 Diode schottky
+Added Member To Class: ClassName=Sche_Boost Member=Component D9 Diode schottky
+Added Member To Class: ClassName=Sche_Boost Member=Component D12 10A/200V
+Added Member To Class: ClassName=Sche_Boost Member=Component D14 Diode
+Added Member To Class: ClassName=Sche_Boost Member=Component D15 SS24
+Added Member To Class: ClassName=Sche_Boost Member=Component D17 SS24
+Added Member To Class: ClassName=Sche_Boost Member=Component F3 F
+Added Member To Class: ClassName=Sche_Boost Member=Component Q3 S8050
+Added Member To Class: ClassName=Sche_Boost Member=Component Q4 S8050
+Added Member To Class: ClassName=Sche_Boost Member=Component Q6 PNP
+Added Member To Class: ClassName=Sche_Boost Member=Component Q8 HY3906
+Added Member To Class: ClassName=Sche_Boost Member=Component Q10 HY3906
+Added Member To Class: ClassName=Sche_Boost Member=Component Q12 S8050
+Added Member To Class: ClassName=Sche_Boost Member=Component Q14 HY3906
+Added Member To Class: ClassName=Sche_Boost Member=Component R3 1k/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R6 56R/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R7 56R/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R8 1k/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R9 1k/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R10 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R11 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R12 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R13 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R14 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R15 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R16 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R17 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R18 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R19 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R20 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R21 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R22 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R23 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R24 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R25 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R26 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R27 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R28 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R29 1k/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R30 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R31 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R32 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R33 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R34 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R35 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R36 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R37 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R38 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R40 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R41 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R42 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component R43 Res
+Added Member To Class: ClassName=Sche_Boost Member=Component RL1 Relay YL-368-A
+Added Member To Class: ClassName=Sche_Boost Member=Component U3 STM32F103C8T7

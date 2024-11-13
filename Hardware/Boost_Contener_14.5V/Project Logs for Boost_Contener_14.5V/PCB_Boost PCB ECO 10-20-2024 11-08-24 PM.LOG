@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=ADC_Current_1 Pin=Cx5-2
+Removed Pin From Net: NetName=ADC_Current_2 Pin=Cx6-2
+Removed Pin From Net: NetName=ADC_Current_2 Pin=U3-12
+Removed Pin From Net: NetName=ADC_Current_1 Pin=U3-15
+Added Component: Designator=R47(RES-SMD-1206)
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Component: Designator=R48(RES-SMD-1206)
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=ADC_Current_1 Pin=R47-2
+Added Pin To Net: NetName=ADC_Current_2 Pin=R48-2
+Change Net Name : Old Net Name=ADC_Current_1 New Net Name=NetD2_3
+Change Net Name : Old Net Name=ADC_Current_2 New Net Name=NetD3_3
+Added Pin To Net: NetName=ADC_Current_1 Pin=Cx5-2
+Added Pin To Net: NetName=ADC_Current_1 Pin=R47-1
+Added Pin To Net: NetName=ADC_Current_1 Pin=U3-15
+Added Net: Name=ADC_Current_1
+Added Pin To Net: NetName=ADC_Current_2 Pin=Cx6-2
+Added Pin To Net: NetName=ADC_Current_2 Pin=R48-1
+Added Pin To Net: NetName=ADC_Current_2 Pin=U3-12
+Added Net: Name=ADC_Current_2
+Added Member To Class: ClassName=Sche_Boost Member=Component R47 1K/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component R48 1K/1206

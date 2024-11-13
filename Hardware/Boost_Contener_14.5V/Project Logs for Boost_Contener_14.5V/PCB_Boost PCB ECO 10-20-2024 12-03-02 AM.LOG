@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=NetC8_1 Pin=D13-3
+Removed Member From Class: ClassName=Sche_Boost Member=D13
+Added Pin To Net: NetName=NetC8_1 Pin=C11-1
+Added Pin To Net: NetName=NetC8_1 Pin=C11-1
+Added Pin To Net: NetName=NetC8_1 Pin=C11-1
+Added Pin To Net: NetName=NetC8_1 Pin=C11-1
+Added Pin To Net: NetName=NetC8_1 Pin=RL2-3
+Change Net Name : Old Net Name=NetC8_1 New Net Name=BAT_IN+

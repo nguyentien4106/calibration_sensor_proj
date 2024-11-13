@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=ADC_VIN Pin=U3-14
+Removed Pin From Net: NetName=Temp_SS_1 Pin=U3-16
+Added Pin To Net: NetName=Temp_SS_1 Pin=U3-14
+Added Pin To Net: NetName=ADC_VIN Pin=U3-15

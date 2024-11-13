@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=+3.3 Pin=R14-2
+Removed Member From Class: ClassName=Sche_Boost Member=LED2
+Removed Member From Class: ClassName=Sche_Boost Member=R14

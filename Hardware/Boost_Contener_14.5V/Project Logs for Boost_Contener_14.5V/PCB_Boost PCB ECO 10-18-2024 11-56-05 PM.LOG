@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=BAT_+ Pin=C1-1
+Removed Pin From Net: NetName=GND Pin=C1-2
+Removed Pin From Net: NetName=BAT_+ Pin=C2-1
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Member From Class: ClassName=Sche_Boost Member=C1
+Removed Member From Class: ClassName=Sche_Boost Member=C2
+Change Component Comment : Designator=R1 Old Comment=1K/1206 New Comment=1k/0805
+Change Component Comment : Designator=R2 Old Comment=1K/1206 New Comment=1k/0805
+Change Component Designator: OldDesignator=U? NewDesignator=U4
+Added Component: Designator=Cx29(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Component: Designator=Cx30(CN-SMD-1206)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=Cx29-1
+Added Pin To Net: NetName=BAT_+ Pin=Cx29-2
+Added Pin To Net: NetName=GND Pin=Cx30-1
+Added Pin To Net: NetName=BAT_+ Pin=Cx30-2
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx29 1uF/1206
+Added Member To Class: ClassName=Sche_Boost Member=Component Cx30 1uF/1206

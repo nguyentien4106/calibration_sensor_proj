@@ -1,0 +1,26 @@
+Added Component: Designator=HD1(IDC10)
+Add component (AddParameter): Name = "Value"; Value = "Header 5x2"; VariantName = "[No Variations]"
+Added Component: Designator=LED3(LED-0805-Blue)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "D:\Dropbox\Datasheets\Opto and Illumination\LEDs\SMD LED.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Unit Price"; Value = "0.0476"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Blue"; VariantName = "[No Variations]"
+Added Component: Designator=R55(RES-SMD-1206)
+Add component (AddParameter): Name = "Class"; Value = "Passive"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Generic Components"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "08/06/2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Hobart Technology Centre"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=CLK Pin=HD1-2
+Added Pin To Net: NetName=DIO Pin=HD1-4
+Added Pin To Net: NetName=GND Pin=HD1-6
+Added Pin To Net: NetName=+3.3 Pin=HD1-8
+Added Pin To Net: NetName=GND Pin=LED3-2
+Added Pin To Net: NetName=NetHD1_10 Pin=HD1-10
+Added Pin To Net: NetName=NetHD1_10 Pin=R55-2
+Added Net: Name=NetHD1_10
+Added Pin To Net: NetName=NetLED3_1 Pin=LED3-1
+Added Pin To Net: NetName=NetLED3_1 Pin=R55-1
+Added Net: Name=NetLED3_1
+Added Member To Class: ClassName=Sche_Boost Member=Component HD1 IDC 5x2
+Added Member To Class: ClassName=Sche_Boost Member=Component LED3 LED-Blue
+Added Member To Class: ClassName=Sche_Boost Member=Component R55 Res
