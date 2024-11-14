@@ -2,6 +2,10 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from constant.options import *
 from helpers.common import create_request
+from constant.requests import *
+import json
+
+SELF_CONFIG = "SELF CONFIG"
 
 def init_extra_settings(self):
     self.grid = tk.Grid()
@@ -63,27 +67,36 @@ def update_action(self):
         messagebox.showerror("Error", "Color On must different with Color Off.")
         return
     
-    self.request(
-        create_request(SETUP, {
-            "time_on": time_on_val,
-            "color_on": color_on_val,
-            "color_off": color_off_val,
-            "led_mode": {
-                "mode": led_mode_val
-            }
-        })
-    )
-    messagebox.showinfo("Update Action", f"led_mode_val: {led_mode_val}, time_on_val: {time_on_val}, color_on_val: {color_on_val},color_off_val {color_off_val} ")
+    led_mode_data = {
+        "mode": led_mode_val
+    }
+
+    if led_mode_val == SELF_CONFIG:
+        if len(self.leds_ordering) != 20:
+            messagebox.showerror("Error", "Finish select the orders.")
+            return
+        else:
+            led_mode_data["ordering"] = self.leds_ordering
+
+    body = create_request(SETUP, {
+        "time_on": time_on_val,
+        "color_on": color_on_val,
+        "color_off": color_off_val,
+        "led_mode": led_mode_data
+    })
+    self.request(body)
+
+    messagebox.showinfo("Update Action", body.decode())
 
 def on_led_mode_change(self, idx, val, opt):
     selected_mode = self.led_mode_var.get()
-    self.leds_frame = tk.Frame(self.settings_tab)
 
-    if( selected_mode == "SELF CONFIG"):
+    if( selected_mode == SELF_CONFIG):
+        self.leds_frame = ttk.Frame(self.settings_tab)
         self.leds_frame.pack(padx=10, pady=10, side=tk.LEFT)
         # Create a frame to hold the buttons
-        ttk.Label(self.settings_tab, text="Ordering: ").pack(side=tk.LEFT, padx=10, pady=10)
-        
+        self.ordering_label = ttk.Label(self.settings_tab, text="Ordering: ")
+        self.ordering_label.pack(side=tk.LEFT, padx=10, pady=10)
         self.preview_ordering = ttk.Label(self.settings_tab, text="", background='#fff', foreground='#f00')
         self.preview_ordering.pack(side=tk.LEFT, padx=10, pady=10)
 
@@ -92,9 +105,9 @@ def on_led_mode_change(self, idx, val, opt):
             self.leds_button.append(button)
             button.grid(row=(i-1)//5, column=(i-1)%5, padx=5, pady=5)  # Arrange in a grid of 5 columns
     else:
-        print('destroy', self.leds_frame)
-        self.leds_frame.destroy()
-        self.leds_frame = None
+        self.leds_frame.pack_forget()
+        self.preview_ordering.pack_forget()
+        self.ordering_label.pack_forget()
 
 def button_click(self, val):
     self.leds_button[val - 1]["state"] = "disabled"

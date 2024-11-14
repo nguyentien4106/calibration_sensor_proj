@@ -82,6 +82,7 @@ class CalibrationSensorApp:
             self.stop_thread = False
             self.receive_thread = threading.Thread(target=self.receive_data)
             self.receive_thread.start()
+            self.request(create_request(HEALTH_CHECK, None))
             self.hide_loading_panel()
         except Exception as e:
             self.root.after(0, lambda: messagebox.showerror("Connection Error", f"Could not open port {port}: {e}"))
@@ -98,17 +99,11 @@ class CalibrationSensorApp:
         while not self.stop_thread and self.serial_port and self.serial_port.is_open:
             try:
                 data = self.serial_port.readline().decode('utf-8').strip()
-                print('receive', data)
-                if data:
-                    self.root.after(0, self.update_display, data)
+                handle_receive_data(self, data)
+                
             except Exception as e:
-                self.root.after(0, self.update_display, f"Error reading data: {e}")
+                self.root.after(0, update_display, self, f"Error reading data: {e}")
             time.sleep(2)
-
-    def update_display(self, message):
-        """Update the data display in the Data tab."""
-        self.data_display.insert(tk.END, f"{message}\n")
-        self.data_display.see(tk.END)
 
     def enable_controls(self):
         """Enable Send and Disconnect buttons after a successful connection."""

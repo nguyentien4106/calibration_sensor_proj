@@ -1,9 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-import serial
 import serial.tools.list_ports
-import threading
-import time
 
 def init_settings_tab(self):
     self.left_frame = ttk.Frame(self.settings_tab)
