@@ -4,7 +4,7 @@ public partial class HomePageViewModel : BaseViewModel
 {
     BluetoothLEService BluetoothLEService;
 
-    public ObservableCollection<DeviceCandidate> DeviceCandidates { get; } = [new DeviceCandidate() { Name = "Device 1", Id = Guid.NewGuid() }];
+    public ObservableCollection<DeviceCandidate> DeviceCandidates { get; } = [];
 
     public IAsyncRelayCommand GoToHeartRatePageAsyncCommand { get; }
     public IAsyncRelayCommand ScanNearbyDevicesAsyncCommand { get; }

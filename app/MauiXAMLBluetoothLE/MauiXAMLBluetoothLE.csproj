@@ -90,6 +90,10 @@
 	  <PackageReference Include="Plugin.BLE" Version="3.1.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="NewFolder\" />
+	</ItemGroup>
+
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionMauiXAMLBluetoothLEHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

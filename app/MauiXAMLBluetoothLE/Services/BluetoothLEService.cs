@@ -28,7 +28,7 @@ public class BluetoothLEService
 
         try
         {
-            IReadOnlyList<IDevice> systemDevices = Adapter.GetSystemConnectedOrPairedDevices(HeartRateUuids.HeartRateServiceUuids);
+            IReadOnlyList<IDevice> systemDevices = Adapter.GetKnownDevicesByIds([HeartRateUuids.HMShopServiceUuid]);
             foreach (var systemDevice in systemDevices)
             {
                 DeviceCandidate deviceCandidate = DeviceCandidateList.FirstOrDefault(d => d.Id == systemDevice.Id);
@@ -42,7 +42,7 @@ public class BluetoothLEService
                     await ShowToastAsync($"Found {systemDevice.State.ToString().ToLower()} device {systemDevice.Name}.");
                 }
             }
-            await Adapter.StartScanningForDevicesAsync(HeartRateUuids.HeartRateServiceUuids);
+            await Adapter.StartScanningForDevicesAsync();
         }
         catch (Exception ex)
         {

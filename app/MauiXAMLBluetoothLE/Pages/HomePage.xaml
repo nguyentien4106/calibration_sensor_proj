@@ -58,13 +58,6 @@
                                         <Label Style="{StaticResource BaseLabel}" Text="{Binding Name}" />
                                         <Label Style="{StaticResource MicroLabel}" Text="{Binding Id}" />
                                     </VerticalStackLayout>
-                                    <Button 
-                                        Text="Connect"
-                                        VerticalOptions="End"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomePageViewModel}},
-                                                  Path=ConnectDeviceAsyncCommand}"
-                                        CommandParameter="{Binding .}"
-                                        />
                                 </HorizontalStackLayout>
                             </Frame>
                         </Grid>

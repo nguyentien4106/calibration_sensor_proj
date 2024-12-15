@@ -13,211 +13,152 @@
         <converter:ButtonColumnIndexConverter x:Key="ColumnIndexConverter"/>
         <converter:ButtonRowIndexConverter x:Key="RowIndexConverter"/>
     </ContentPage.Resources>
-    <Grid x:Name="HeartRatePageGrid"
-              ColumnDefinitions="*,*,*"
-              ColumnSpacing="6"
-              RowDefinitions="*,*,*,*,*,*"
-              RowSpacing="0"
-              BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+    <Grid 
+        x:Name="HeartRatePageGrid"
+        ColumnDefinitions="*,*,*"
+        ColumnSpacing="6"
+        RowDefinitions="*,*,*,*,*,*"
+        RowSpacing="0"
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        <StackLayout
+            Grid.Row="0"
+            Grid.Column="1"
+            Orientation="Horizontal"
+            HorizontalOptions="Center">
+            <Button x:Name="ConnectToButton"
+                Margin="8"
+                Command="{Binding ConnectToDeviceCandidateAsyncCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                IsVisible="{Binding IsNotBusy}"
+                Style="{StaticResource ButtonOutline}"
+                Text="Connect" />
 
-            <StackLayout 
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.ColumnSpan="3"
-                BackgroundColor="Transparent">
+            <Button x:Name="DisconnectFromButton"
+                Margin="8"
+                Command="{Binding DisconnectFromDeviceAsyncCommand}"
+                IsEnabled="{Binding Connected}"
+                IsVisible="{Binding Connected}"
+                Style="{StaticResource ButtonOutline}"
+                Text="Disconnect" />
+        </StackLayout>
+        <StackLayout
+            IsVisible="{Binding Connected}"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="3"
+            BackgroundColor="Transparent">
 
-                <Label 
-                    Text="Score"
-                    FontSize="20"
-                    HorizontalOptions="CenterAndExpand"/>
-                <Label 
-                    Text="{Binding HeartRateValue}"
-                    Style="{StaticResource ExtraLargeLabel}"
-                    HorizontalOptions="CenterAndExpand"/>
+            <Label 
+                Text="Score"
+                FontSize="20"
+                HorizontalOptions="CenterAndExpand"/>
+            
+            <Label 
+                Text="{Binding HeartRateValue, Mode=TwoWay}"
+                Style="{StaticResource ExtraLargeLabel}"
+                HorizontalOptions="CenterAndExpand"/>
 
-            </StackLayout>
-            <StackLayout
-                Grid.Row="2"
-                Grid.RowSpan="3"
-                Grid.ColumnSpan="3"
-                BackgroundColor="Transparent">
-                <Grid 
-                    RowDefinitions="*,*,*"
-                    ColumnDefinitions="*,*,*,*"
-                    RowSpacing="8"
-                    ColumnSpacing="10"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand">
+        </StackLayout>
+        <StackLayout
+            IsVisible="{Binding Connected}"
+            Grid.Row="3"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="Transparent">
+            <Grid 
+                RowDefinitions="*,*,*,*"
+                ColumnDefinitions="*,*,*,*"
+                RowSpacing="8"
+                ColumnSpacing="10"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"
+                    Orientation="Horizontal"
+                    Spacing="10"
+                    HorizontalOptions="CenterAndExpand">
                     <Label
-                        Grid.Row="0"
-                        Grid.Column="0"
                         Text="Select Mode:"/>
 
                     <Picker
-                        Grid.Row="0"
-                        Grid.Column="1"
                         x:Name="ModePicker"
                         ItemsSource="{Binding Modes}"
-                        SelectedItem="{Binding SelectedMode}">
+                        SelectedItem="{Binding SelectedMode}"
+                        SelectedIndex="{Binding SelectedModeIndex}"
+                        WidthRequest="200">
                     </Picker>
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        Text="Time On:"/>
-
-                    <Entry
-                        Grid.Row="0"
-                        Grid.Column="3"
-                        x:Name="TimeOnInput">
-                    </Entry>
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Text="Color On:"/>
-
-                    <Picker
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        x:Name="ColorOnPicker"
-                        ItemsSource="{Binding OnColors}"
-                        SelectedItem="{Binding SelectedColorOn}">
-                    </Picker>
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Text="Color Off:" 
-                        VerticalOptions="Center"/>
-
-                    <Picker
-                        Grid.Row="1"
-                        Grid.Column="3"
-                        x:Name="ColorOffPicker"
-                        HorizontalOptions="FillAndExpand"
-                        ItemsSource="{Binding OffColors}"
-                        SelectedItem="{Binding SelectedColorOff}">
-                    </Picker>
-                </Grid>
-
-            </StackLayout>
-            <ScrollView 
-                Grid.Row="4" 
-                Grid.Column="1"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                >
-            <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <!-- Use BindableLayout to generate buttons -->
-                <CollectionView ItemsSource="{Binding LedButtons}" >
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate >
-                            <Button
-                                Text="{Binding Name}"
-                                Grid.Row="{Binding RowIndex}"
-                                Grid.Column="{Binding ColumnIndex}">
-                                
-                            </Button>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-                <CollectionView>
-                    <CollectionView.ItemsSource>
-                        <x:Array Type="{x:Type model:LedButton}">
-                        </x:Array>
-                    </CollectionView.ItemsSource>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Label Text="{Binding Name}" FontAttributes="Bold" />
-                                <Label Grid.Column="1" Text="{Binding Age}" />
-                                <Label Grid.Column="2" Text="{Binding Location}" HorizontalTextAlignment="End" />
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-                <!--<BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Button 
-                            Text="{Binding .}"
-                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HeartRatePageViewModel}}, Path=ButtonCommand}"
-                            CommandParameter="{Binding .}"
-                            HorizontalOptions="FillAndExpand" 
-                            Grid.Row="{Binding Converter={StaticResource RowIndexConverter}, ConverterParameter={Binding .}}"
-                            >
-                        </Button>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>-->
-            </Grid>
-        </ScrollView>
-            <!--<VerticalStackLayout 
-                Grid.RowSpan="1"
-                Grid.ColumnSpan="1"
-                Padding="20" 
-                Spacing="10">
-                <Label 
-                    Text="Select Mode:"
-                    FontSize="20" />
-                <Picker 
-                        x:Name="ItemPicker"
-                        Title="Choose an option"
-                        ItemsSource="{Binding Modes}"
-                        SelectedItem="{Binding SelectedMode}">
-                </Picker>
-
-                <Label 
-                        Text="{Binding SelectedMode, StringFormat='Selected Item: {0}'}"
-                        FontSize="20" />
-
-            </VerticalStackLayout>-->
-
-            <!--<Button x:Name="ConnectToButton"
+                    
+                </StackLayout>
+                
+                <!--<Label
                     Grid.Row="1"
                     Grid.Column="0"
-                    Margin="8"
-                    Command="{Binding ConnectToDeviceCandidateAsyncCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    IsVisible="{Binding IsNotBusy}"
-                    Style="{StaticResource ButtonOutline}"
-                    Text="Connect" />
+                    Text="Color On:"/>
 
-            <Button x:Name="DisconnectFromButton"
+                <Picker
                     Grid.Row="1"
                     Grid.Column="1"
-                    Margin="8"
-                    Command="{Binding DisconnectFromDeviceAsyncCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    IsVisible="{Binding IsNotBusy}"
-                    Style="{StaticResource ButtonOutline}"
-                    Text="Disconnect" />
-
-            <Button x:Name="SetupButton"
+                    x:Name="ColorOnPicker"
+                    ItemsSource="{Binding OnColors}"
+                    SelectedItem="{Binding SelectedColorOn}">
+                </Picker>
+                <Label
                     Grid.Row="1"
                     Grid.Column="2"
-                    Margin="8"
-                    Command="{Binding SetupAsyncCommand}"
-                    IsEnabled="{Binding IsNotBusy}"
-                    IsVisible="{Binding IsNotBusy}"
-                    Style="{StaticResource ButtonOutline}"
-                    Text="Setup" />-->
+                    Text="Color Off:" 
+                    VerticalOptions="Center"/>
 
-            <ActivityIndicator x:Name="HeartRatePageActivityIndicator"
-                               Grid.ColumnSpan="2"
-                               IsRunning="{Binding IsBusy}"
-                               IsVisible="{Binding IsBusy}"
-                               HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="StartAndExpand" />
-        </Grid>
+                <Picker
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    x:Name="ColorOffPicker"
+                    HorizontalOptions="FillAndExpand"
+                    ItemsSource="{Binding OffColors}"
+                    SelectedItem="{Binding SelectedColorOff}">
+                </Picker>-->
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Text="Time On:"/>
+
+                <Entry
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    x:Name="TimeOnEntry"
+                    Text="{Binding TimeOn, Mode=TwoWay}">
+                </Entry>
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Text="Time Play:"/>
+
+                <Entry
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    x:Name="TimePlayEntry"
+                    Text="{Binding TimePlay, Mode=TwoWay}">
+                </Entry>
+                
+                <Button 
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Text="Setup"
+                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HeartRatePageViewModel}}, Path=SetupAsyncCommand}"/>
+            </Grid>
+
+        </StackLayout>
+
+
+        <ActivityIndicator 
+            x:Name="HeartRatePageActivityIndicator"
+            Grid.ColumnSpan="3"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="StartAndExpand" />
+    </Grid>
 </ContentPage>
