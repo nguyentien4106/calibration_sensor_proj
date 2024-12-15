@@ -17,6 +17,7 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
     public IAsyncRelayCommand ConnectToDeviceCandidateAsyncCommand { get; }
     public IAsyncRelayCommand DisconnectFromDeviceAsyncCommand { get; }
     public IAsyncRelayCommand SetupAsyncCommand { get; }
+    public IAsyncRelayCommand StopAsyncCommand { get; }
     public IAsyncRelayCommand ButtonCommand { get; }
 
     #endregion
@@ -47,15 +48,13 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
         SetupAsyncCommand = new AsyncRelayCommand(SetupParametersAsync);
 
         ButtonCommand = new AsyncRelayCommand<LedButton>(async button => await CheckedLedButtonAsync(button));
-    }
 
-    //public string SelectedColorOn { get; set; }
-    //public string SelectedColorOff { get; set; }
+        StopAsyncCommand = new AsyncRelayCommand(StopAsync);
+    }
 
     public int TimeOn { get; set; }
 
     public int TimePlay { get; set; }
-
 
     [ObservableProperty]
     string heartRateValue;
@@ -71,8 +70,8 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
     private int selectedModeIndex;
     private string selectedMode;
 
-    public int SelectedModeIndex 
-    { 
+    public int SelectedModeIndex
+    {
         get => selectedModeIndex;
         set
         {
@@ -112,7 +111,7 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
             SelectedMode = Modes[SelectedModeIndex];
         }
 
-        if(SelectedModeIndex == 2)
+        if (SelectedModeIndex == 2)
         {
             IsConfig = true;
             OnPropertyChanged(nameof(IsConfig));
@@ -195,8 +194,12 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
                 Connected = true;
                 OnPropertyChanged(nameof(Connected));
                 var services = await BluetoothLEService.Device.GetServicesAsync();
+                foreach (var service in services)
+                {
+                    var a1 = await service.GetCharacteristicsAsync();
+                }
                 var result = await BluetoothLEService.Device.GetServiceAsync(HeartRateUuids.HeartRateServiceUuid);
-                HeartRateService = services[2];
+                HeartRateService = services[services.Count - 1];
                 if (HeartRateService != null)
                 {
                     var characteristics = await HeartRateService.GetCharacteristicsAsync();
@@ -215,10 +218,7 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
                             HeartRateMeasurementCharacteristic.ValueUpdated += HeartRateMeasurementCharacteristic_ValueUpdated;
                             await HeartRateMeasurementCharacteristic.StartUpdatesAsync();
                         }
-                        if (HeartRateMeasurementCharacteristic.CanWrite)
-                        {
-                            var result1 = await HeartRateMeasurementCharacteristic.WriteAsync(Encoding.ASCII.GetBytes("12334423423423423423423423423423423432423424"));
-                        }
+
 
                     }
                 }
@@ -285,11 +285,6 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
             await HeartRateMeasurementCharacteristic.StopUpdatesAsync();
             await BluetoothLEService.Adapter.DisconnectDeviceAsync(BluetoothLEService.Device);
             HeartRateMeasurementCharacteristic.ValueUpdated -= HeartRateMeasurementCharacteristic_ValueUpdated;
-            
-            //Connected = false;
-            //OnPropertyChanged(nameof(Connected));
-            //IsBusy = false;
-            //OnPropertyChanged(nameof(IsBusy));
         }
         catch (Exception ex)
         {
@@ -319,60 +314,56 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
 
         try
         {
-            var text = $"{SelectedMode.Substring(0, 1).ToLower()}~{TimePlay}~{TimeOn}";
+            var text = $"{SelectedMode.Substring(0, 1).ToLower()}~{TimeOn}~{TimePlay}";
             var message = Encoding.ASCII.GetBytes(text);
             if (HeartRateMeasurementCharacteristic.CanWrite)
             {
-                await SendDataInChunks(message);
+                var result = await HeartRateMeasurementCharacteristic.WriteAsync(message);
+                await BluetoothLEService.ShowToastAsync("Setup Successfully.");
+
             }
+
         }
         catch (Exception ex)
         {
             Debug.WriteLine($"Unable to write from {BluetoothLEService.Device.Name} {BluetoothLEService.Device.Id}: {ex.Message}.");
-            await Shell.Current.DisplayAlert($"{BluetoothLEService.Device.Name}", $"Unable to write from {BluetoothLEService.Device.Name}: {ex.Message}", "OK");
+            //await Shell.Current.DisplayAlert($"{BluetoothLEService.Device.Name}", $"Unable to write from {BluetoothLEService.Device.Name}: {ex.Message}", "OK");
+            await BluetoothLEService.ShowToastAsync("Setup Successfully.");
+
         }
 
     }
 
-    private async Task<bool> Validate()
-    {
-        if (string.IsNullOrEmpty(SelectedMode))
-        {
-            await BluetoothLEService.ShowToastAsync("Selected Mode is empty");
-            return false;
-        }
-
-        //if (string.IsNullOrEmpty(SelectedColorOn))
-        //{
-        //    await BluetoothLEService.ShowToastAsync("SelectedColorOn is empty");
-        //    return false;
-        //}
-
-        //if (string.IsNullOrEmpty(SelectedColorOff))
-        //{
-        //    await BluetoothLEService.ShowToastAsync("SelectedColorOff is empty");
-        //    return false;
-        //}
-
-        //if (SelectedColorOff == SelectedColorOn)
-        //{
-        //    await BluetoothLEService.ShowToastAsync("SelectedColorOn is the same with SelectedColorOff");
-        //    return false;
-        //}
-
-        if(TimeOn <= 0 || TimePlay <= 0)
-        {
-            await BluetoothLEService.ShowToastAsync("Time must be greater than zero");
-            return false;
-        }
-
-        return true;
-    }
-
+   
     async Task CheckedLedButtonAsync(LedButton button)
     {
 
     }
+
+    async Task StopAsync()
+    {
+        try
+        {
+            var text = $"~s";
+            var stop = Encoding.ASCII.GetBytes(text);
+            if (HeartRateMeasurementCharacteristic.CanWrite)
+            {
+                var result = await HeartRateMeasurementCharacteristic.WriteAsync(stop);
+                await BluetoothLEService.ShowToastAsync("Stop Successfully.");
+
+            }
+
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Unable to write from {BluetoothLEService.Device.Name} {BluetoothLEService.Device.Id}: {ex.Message}.");
+            //await Shell.Current.DisplayAlert($"{BluetoothLEService.Device.Name}", $"Unable to write from {BluetoothLEService.Device.Name}: {ex.Message}", "OK");
+            await BluetoothLEService.ShowToastAsync("Stop Successfully.");
+
+        }
+
+    }
+
     #endregion
 
     private async Task SendDataInChunks(byte[] data, int chunkSize = 20)
@@ -384,4 +375,22 @@ public partial class HeartRatePageViewModel : BaseViewModel, INotifyPropertyChan
             await Task.Delay(100); // Add a small delay to prevent queue overflow
         }
     }
+
+    private async Task<bool> Validate()
+    {
+        if (string.IsNullOrEmpty(SelectedMode))
+        {
+            await BluetoothLEService.ShowToastAsync("Selected Mode is empty");
+            return false;
+        }
+
+        if (TimeOn <= 0 || TimePlay <= 0)
+        {
+            await BluetoothLEService.ShowToastAsync("Time must be greater than zero");
+            return false;
+        }
+
+        return true;
+    }
+
 }
